@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/table"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline_50"/>
+
+    <Button
+        android:id="@+id/all_numbers_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="упражнение для всех чисел"
+        app:layout_constraintTop_toBottomOf="@id/table"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/select_numbers_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="упражнение выборочно"
+        app:layout_constraintTop_toBottomOf="@id/all_numbers_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/select_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбери число от 2 до 9"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/select_numbers_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/select_number"/>
+
+    <EditText
+        android:id="@+id/select_number"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:gravity="center"
+        android:background="@color/back"
+        app:layout_constraintTop_toBottomOf="@id/select_numbers_button"
+        app:layout_constraintStart_toEndOf="@id/select_text"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
